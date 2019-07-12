@@ -73,7 +73,7 @@ def play(songs_arr)
   user_input = gets.chomp
    entry = false 
    songs_arr.each_with_index do |song, index|
-      binding.pry
+      #binding.pry
      if user_input.to_i - 1 == index
        entry = true 
        puts "Playing #{song[index]}"
