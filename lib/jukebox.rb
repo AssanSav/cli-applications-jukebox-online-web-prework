@@ -63,25 +63,3 @@ def run(songs)
   exit_jukebox
 end
 
-def list(songs_arr) 
-  #binding.pry
-  songs_arr.each_with_index { |song, index| puts "#{index +1}. #{song}" }
-end
-
-def play(songs_arr)
-  puts "Please enter a song name or number:"
-  user_input = gets.chomp
-   entry = false 
-   songs_arr.each_with_index do |song, index|
-      #binding.pry
-     if user_input.to_i - 1 == index
-       entry = true 
-       puts "Playing #{song[index]}"
-     elsif user_input == song
-     entry = true
-       puts "Playing #{song[index]}"
-     elsif entry = false 
-       puts "Invalid input, please try again"
-     end
-   end
-end
